@@ -20,4 +20,4 @@
 
 
 
-
+Big thank you to [BigLor96](https://github.com/BigLor96/Netcat-Revershell-NEW) and [norepository](https://github.com/norepository/wifi-grabber-rubberducky) for the base line scripts that I have used to develop into my own. 
