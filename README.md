@@ -1,7 +1,7 @@
-# Wi-Fi-Ducky-Scripts
+# Wi-Fi-Duck-Scripts
 
 
-#### Scripts for the USB/Wi-Fi Ducky
+#### Scripts for the USB/Wi-Fi Duck
 ----
 1. [Auto Run](https://github.com/HonkinWaffles/Wi-Fi-Ducky-Scripts/blob/main/Auto%20Run.txt)
     * Uses the following scripts
