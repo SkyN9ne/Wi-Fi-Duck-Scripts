@@ -46,4 +46,4 @@ Remove-Item -Path 'C:\temp\234f23' -Recurse -Force
 
 
 # remove ducky payload
-Remove-Item d.ps1
+Remove-Item 2643.ps1
