@@ -1,7 +1,5 @@
 # Wi-Fi-Ducky-Scripts
 
-These scripts are for educational purposes only
-Please use them responsibly
 
 #### Scripts for the USB/Wi-Fi Ducky
 ----
@@ -16,3 +14,10 @@ Please use them responsibly
     * Will fail if UAC requires Password
 1. [Data Collection](https://github.com/HonkinWaffles/Wi-Fi-Ducky-Scripts/blob/main/Data-Collection/Data%20Collection.txt)
     * Requires [datagrab.ps1](https://github.com/HonkinWaffles/Wi-Fi-Ducky-Scripts/blob/main/Data-Collection/datagrab.ps1)
+
+
+
+
+
+
+
